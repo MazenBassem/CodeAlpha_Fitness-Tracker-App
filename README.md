@@ -89,7 +89,7 @@ npx expo start
 ```
 ---
 ## 🔐 Supabase Schema (Profiles Table)
-sql
+```sql
 
 create table profiles (
   id uuid primary key references auth.users,
@@ -97,9 +97,10 @@ create table profiles (
   avatar_url text,
   updated_at timestamp with time zone default timezone('utc'::text, now())
 );
+```
 ---
 ## 📸 Screenshots
-(Add screenshots or screen recordings here for visual reference)
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/bff98fea-aebe-47a3-9eb2-97a3e6636ff4" />
 ---
 ## 🧠 Future Enhancements
 🧭 Daily/Weekly goals with historical charts
