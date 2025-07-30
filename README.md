@@ -46,31 +46,28 @@ Make sure lottie-react-native is properly installed (SDK 53 compatible):
 
 npx expo install lottie-react-native
 ```
----
-3. Set up Supabase
+
+###3. Set up Supabase
 Create a .env file in the root with:
 
-env
-Copy
-Edit
+```env
+
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_ANON_KEY=your-anon-key
 Configure Supabase in lib/supabase.ts:
 
-ts
-Copy
-Edit
 import { createClient } from '@supabase/supabase-js';
 export const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_ANON_KEY!);
-4. Run the app
-bash
-Copy
-Edit
+```
+###4. Run the app
+```bash
+
 
 
 npx expo start
+```
 ---
-###📁 Project Structure
+##📁 Project Structure
 ```bash
 
 /components
@@ -89,7 +86,7 @@ npx expo start
 
 ```
 ---
-### 🔐 Supabase Schema (Profiles Table)
+## 🔐 Supabase Schema (Profiles Table)
 sql
 
 create table profiles (
@@ -99,10 +96,10 @@ create table profiles (
   updated_at timestamp with time zone default timezone('utc'::text, now())
 );
 ---
-### 📸 Screenshots
+## 📸 Screenshots
 (Add screenshots or screen recordings here for visual reference)
-
-🧠 Future Enhancements
+---
+##🧠 Future Enhancements
 🧭 Daily/Weekly goals with historical charts
 
 ⌚ Apple Health / Google Fit sync
@@ -111,30 +108,26 @@ create table profiles (
 
 🧘 Workout logging & meditation tracking
 
-💡 Tips
+##💡 Tips
 If using Dev Client, rebuild with:
 
-bash
-Copy
-Edit
+```bash
+
 npx expo run:android | run:ios
 If facing lottie-react-native install issues, run:
+```
+```bash
 
-bash
-Copy
-Edit
 npx expo install lottie-react-native
 If you get peer dependency issues:
+```
+```bash
 
-bash
-Copy
-Edit
 npm install --legacy-peer-deps
-📄 License
+```
+---
+##📄 License
 MIT © Your Name
 
-yaml
-Copy
-Edit
 
 ---
