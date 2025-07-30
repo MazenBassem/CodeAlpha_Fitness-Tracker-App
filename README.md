@@ -42,24 +42,26 @@ cd fitness-app
 npx expo install
 Make sure lottie-react-native is properly installed (SDK 53 compatible):
 ```
+
 ```bash
 
 npx expo install lottie-react-native
 ```
 
-###3. Set up Supabase
+### 3. Set up Supabase
 Create a .env file in the root with:
 
 ```env
 
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_ANON_KEY=your-anon-key
+```
 Configure Supabase in lib/supabase.ts:
-
+```
 import { createClient } from '@supabase/supabase-js';
 export const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_ANON_KEY!);
 ```
-###4. Run the app
+### 4. Run the app
 ```bash
 
 
@@ -67,7 +69,7 @@ export const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPA
 npx expo start
 ```
 ---
-##📁 Project Structure
+## 📁 Project Structure
 ```bash
 
 /components
@@ -99,7 +101,7 @@ create table profiles (
 ## 📸 Screenshots
 (Add screenshots or screen recordings here for visual reference)
 ---
-##🧠 Future Enhancements
+## 🧠 Future Enhancements
 🧭 Daily/Weekly goals with historical charts
 
 ⌚ Apple Health / Google Fit sync
@@ -108,7 +110,7 @@ create table profiles (
 
 🧘 Workout logging & meditation tracking
 
-##💡 Tips
+## 💡 Tips
 If using Dev Client, rebuild with:
 
 ```bash
@@ -126,7 +128,7 @@ If you get peer dependency issues:
 npm install --legacy-peer-deps
 ```
 ---
-##📄 License
+## 📄 License
 MIT © Your Name
 
 
