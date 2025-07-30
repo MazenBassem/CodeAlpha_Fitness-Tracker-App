@@ -34,17 +34,19 @@ A sleek, modern fitness app built with **React Native**, **Expo Router**, and **
 ```bash
 git clone https://github.com/your-username/fitness-app.git
 cd fitness-app
-2. Install dependencies
-bash
-Copy
-Edit
+```
+
+### 2. Install dependencies
+```bash
+
 npx expo install
 Make sure lottie-react-native is properly installed (SDK 53 compatible):
+```
+```bash
 
-bash
-Copy
-Edit
 npx expo install lottie-react-native
+```
+---
 3. Set up Supabase
 Create a .env file in the root with:
 
@@ -64,11 +66,13 @@ export const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPA
 bash
 Copy
 Edit
+
+
 npx expo start
-📁 Project Structure
-bash
-Copy
-Edit
+---
+###📁 Project Structure
+```bash
+
 /components
   └── CalorieBanner.tsx      # Progress ring + Lottie + calories
   └── Header.tsx             # User avatar, username, date
@@ -83,17 +87,19 @@ Edit
   ├── images/                # PNGs, model, banner
   └── animations/            # Lottie JSONs
 
-🔐 Supabase Schema (Profiles Table)
+```
+---
+### 🔐 Supabase Schema (Profiles Table)
 sql
-Copy
-Edit
+
 create table profiles (
   id uuid primary key references auth.users,
   username text,
   avatar_url text,
   updated_at timestamp with time zone default timezone('utc'::text, now())
 );
-📸 Screenshots
+---
+### 📸 Screenshots
 (Add screenshots or screen recordings here for visual reference)
 
 🧠 Future Enhancements
